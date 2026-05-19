@@ -140,3 +140,46 @@ button[type="submit"] {
         font-size: 1.5rem;
     }
 }
+
+/* --- Estilo para a Mensagem de Sucesso --- */
+
+.success-message {
+    background-color: #e3f2fd; /* Usando o azul claro da paleta antiga, que é ótimo para mensagens */
+    border-left: 5px solid var(--motiva-purple);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 6px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-message h2 {
+    color: var(--motiva-purple);
+    margin-top: 0;
+    border-bottom: none; /* Remove a borda do h2 original */
+    text-align: left;
+}
+
+.success-message ul {
+    list-style: none;
+    padding: 0;
+}
+
+.success-message li {
+    background-color: var(--neutral-white);
+    padding: 0.75rem;
+    border: 1px solid var(--neutral-medium-gray);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* Animação de surgimento suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

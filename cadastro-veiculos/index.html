@@ -17,9 +17,8 @@
     </header>
 
     <main>
-        <!-- Início do Formulário de Cadastro -->
-        <form>
-            <!-- Agrupa os campos relacionados aos dados do usuário -->
+        <!-- Adicionado um ID ao formulário para selecioná-lo no JS -->
+        <form id="cadastroForm">
             <section class="user-data">
                 <h2>Dados do Usuário</h2>
                 <div class="form-group">
@@ -32,7 +31,6 @@
                 </div>
             </section>
 
-            <!-- Agrupa os campos relacionados aos dados do veículo -->
             <section class="vehicle-data">
                 <h2>Dados do Veículo</h2>
                 <div class="form-group">
@@ -54,14 +52,19 @@
                 </div>
             </section>
 
-            <!-- Botão de envio do formulário -->
             <button type="submit">Cadastrar</button>
         </form>
+
+        <!-- Container para a mensagem de sucesso e os dados (inicialmente vazio) -->
+        <div id="responseContainer"></div>
+
     </main>
 
     <footer>
         <p>&copy; 2026 - Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Conexão com o arquivo JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
