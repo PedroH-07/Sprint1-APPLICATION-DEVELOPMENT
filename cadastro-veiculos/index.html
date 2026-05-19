@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados para configuração da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos | Motiva Cadastros</title>
+
+    <!-- Conexão com a folha de estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Plataforma de Cadastro</h1>
+        <p>Motiva Cadastros</p>
+    </header>
+
+    <main>
+        <!-- Início do Formulário de Cadastro -->
+        <form>
+            <!-- Agrupa os campos relacionados aos dados do usuário -->
+            <section class="user-data">
+                <h2>Dados do Usuário</h2>
+                <div class="form-group">
+                    <label for="userName">Nome Completo:</label>
+                    <input type="text" id="userName" name="userName" placeholder="Digite seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">E-mail:</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Digite seu melhor e-mail" required>
+                </div>
+            </section>
+
+            <!-- Agrupa os campos relacionados aos dados do veículo -->
+            <section class="vehicle-data">
+                <h2>Dados do Veículo</h2>
+                <div class="form-group">
+                    <label for="vehicleModel">Modelo do Veículo:</label>
+                    <input type="text" id="vehicleModel" name="vehicleModel" placeholder="Onix, HB20, Mobi" required>
+                </div>
+                <div class="form-group">
+                    <label for="vehicleType">Tipo de Veículo:</label>
+                    <select id="vehicleType" name="vehicleType" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="carro">Carro</option>
+                        <option value="moto">Moto</option>
+                        <option value="caminhao">Caminhão</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="vehicleYear">Ano de Fabricação:</label>
+                    <input type="number" id="vehicleYear" name="vehicleYear" placeholder="Digite o ano do veículo" required>
+                </div>
+            </section>
+
+            <!-- Botão de envio do formulário -->
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* --- Paleta de Cores da Marca --- */
+:root {
+    --motiva-purple: #6225e6;  /* Cor primária, extraída do logo */
+    --neutral-white: #ffffff;
+    --neutral-light-gray: #f4f5f7;
+    --neutral-medium-gray: #e1e4e8;
+    --neutral-dark-gray: #586069;
+    --neutral-text: #24292e;
+}
+
+/* --- Estilos Gerais e Estrutura da Página --- */
+
+body {
+    /* Define uma pilha de fontes de sistema para melhor performance e integração nativa */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: var(--neutral-light-gray);
+    color: var(--neutral-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que o corpo ocupe, no mínimo, a altura total da tela */
+    line-height: 1.5;   /* Aumenta o espaçamento entre linhas para melhor legibilidade */
+}
+
+header, footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--neutral-white);
+    padding: 1rem 0;
+}
+
+header {
+    border-bottom: 1px solid var(--neutral-medium-gray);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--neutral-text);
+    font-size: 1.75rem;
+}
+
+header p {
+    margin: 0.25rem 0 0;
+    color: var(--motiva-purple);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+main {
+    width: 100%;
+    max-width: 700px; /* Define uma largura máxima para o conteúdo principal em telas grandes */
+    margin: 2rem 1rem;
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+footer {
+    margin-top: auto; /* Empurra o rodapé para o fim da área visível */
+    padding: 1.5rem 0;
+    color: var(--neutral-dark-gray);
+    border-top: 1px solid var(--neutral-medium-gray);
+}
+
+/* --- Estilos do Formulário --- */
+
+form {
+    background-color: var(--neutral-white);
+    padding: 2.5rem;
+    border: 1px solid var(--neutral-medium-gray);
+    border-radius: 6px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--motiva-purple);
+    border-bottom: 1px solid var(--neutral-medium-gray);
+    padding-bottom: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Controla o espaçamento vertical entre os campos */
+}
+
+.form-group label {
+    display: block; /* Posiciona o rótulo em sua própria linha, acima do campo */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--neutral-medium-gray);
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: var(--neutral-white);
+}
+
+/* --- Estilização do Botão Principal --- */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--motiva-purple);
+    color: var(--neutral-white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+/* --- Regras de Responsividade --- */
+
+/* Aplica estas regras para telas com largura máxima de 768px */
+@media (max-width: 768px) {
+    body {
+        /* Reduz o tamanho da fonte em telas menores para melhor encaixe */
+        font-size: 14px;
+    }
+
+    main {
+        margin: 1rem; /* Reduz as margens laterais em dispositivos móveis */
+    }
+
+    form {
+        padding: 1.5rem; /* Reduz o espaçamento interno do formulário */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
